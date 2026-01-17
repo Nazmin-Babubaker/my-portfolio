@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio showcasing projects, skills, and contact information.
 
-Live demo: [https://nzabbkr.vercel.app/#](https://nzabbkr.vercel.app/#)
+Live demo: [https://nzabbkr.vercel.app/#](https://nzabbkr.vercel.app)
 
 ## About
 This portfolio is a single-page application built with React and styled using Tailwind CSS. Icons are provided via Lucide. It demonstrates my UI work, featured projects, and contact details.
