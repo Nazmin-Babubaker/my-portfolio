@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from './components/Navbar'
+import About from './components/About'
 
 const App = () => {
   return (
@@ -28,7 +29,9 @@ const App = () => {
         </p>
   
   
-</section>
+      </section>
+
+      <About />
       
     </div>
   )
