@@ -15,7 +15,6 @@ export default function SkillCard({ icon: Icon, name, colorClass, rarityColor })
         </div>
 
         <div className="w-full text-center">
-          <p className="text-[10px] font-pixel uppercase text-gray-400 tracking-tighter">Legendary</p>
           <p className="font-bold text-gray-700 text-sm leading-none pb-1">{name}</p>
         </div>
 

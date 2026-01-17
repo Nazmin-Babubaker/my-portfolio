@@ -16,7 +16,7 @@ export default function ProjectCard({ quest }) {
   const CategoryIcon = styles.icon;
 
   return (
-    <div className="bg-white border-[6px] border-white shadow-[10px_10px_0_0_#ffc8dd] rounded-[32px] overflow-hidden group hover:-translate-y-3 transition-all duration-300 flex flex-col h-full">
+    <div className="bg-white border-[6px] border-white shadow-[10px_10px_0_0_#ffc8dd] rounded-4xl overflow-hidden group hover:-translate-y-3 transition-all duration-300 flex flex-col h-full">
       
       <div className="h-44 overflow-hidden relative">
         <img 
@@ -56,7 +56,7 @@ export default function ProjectCard({ quest }) {
             ))}
           </div>
 
-          <button className="w-full bg-[#cdb4db] hover:bg-bubblegum text-white font-pixel text-xs py-3 rounded-xl transition-all flex items-center justify-center gap-2 shadow-[0_4px_0_0_#b596c4] hover:shadow-[0_4px_0_0_#fb6f92] active:translate-y-1 active:shadow-none">
+          <button className="w-full bg-lavender hover:bg-bubblegum text-white font-pixel text-xs py-3 rounded-xl transition-all flex items-center justify-center gap-2 shadow-[0_4px_0_0_#b596c4] hover:shadow-[0_4px_0_0_#fb6f92] active:translate-y-1 active:shadow-none">
             VIEW_SOURCE <ExternalLink size={12} />
           </button>
         </div>

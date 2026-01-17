@@ -7,6 +7,13 @@ import {
   Globe, Server, Settings, Search
 } from "lucide-react";import SkillCard from './components/SkillCard';
 import ProjectCard from './components/ProjectCard';
+import explainerImg from "./assets/context.png";
+import ritImg from "./assets/Rit.png";
+import serviceImg from "./assets/service.png";
+import mentoraImg from "./assets/mentora.png";
+import accImg from "./assets/acc.png";
+import Contact from './components/Contact';
+
 
 
 
@@ -17,7 +24,7 @@ const QUESTS = [
 category: "Extension", 
     description: "An AI-powered assistant that explains content in context by analyzing user input and generating meaningful, easy-to-understand responses.",
     rewards: ["Manifest.json", "JavaScript", "HTML,CSS"],
-    image: "https://placehold.co/600x400/ffafcc/white?text=Contextual+Explainer"
+    image: explainerImg
   },
   {
     id: 2,
@@ -25,7 +32,7 @@ category: "Extension",
     category: "Web App", 
     description: "A campus navigation platform with indoor and outdoor mapping that helps users locate departments, facilities, and services using intelligent pathfinding.",
     rewards: ["JS", "Pannellum", "CSS"],
-    image: "https://placehold.co/600x400/cdb4db/white?text=RIT+Tracker"
+    image: ritImg
   },
   {
     id: 3,
@@ -33,7 +40,7 @@ category: "Extension",
     category: "Web App", 
     description: "A service-based web platform that connects users with nearby workers for tasks like cleaning, gardening, and plumbing through a role-based system.",
     rewards: ["JS", "Express", "Postgres"],
-    image: "https://placehold.co/600x400/cdb4db/white?text=Service+Provision"
+    image: serviceImg
   },
   {
     id: 4,
@@ -41,7 +48,7 @@ category: "Extension",
     category: "Extension", 
     description: "An AI-driven mentoring assistant that provides guidance, learning support, and contextual help for users through interactive conversations.",
     rewards: ["JS", "HTML", "Gemini API"],
-    image: "https://placehold.co/600x400/ffafcc/white?text=Mentora"
+    image: mentoraImg
   },
   {
     id: 5,
@@ -49,7 +56,7 @@ category: "Extension",
     category: "Other", 
     description: "A driver-assistance system that automatically maintains safe speed and distance from vehicles ahead using sensor data and control logic.",
     rewards: ["ROS","Python"],
-    image: "https://placehold.co/600x400/cdb4db/white?text=ACC"
+    image: accImg
   }
 ];
 
@@ -87,9 +94,12 @@ const App = () => {
 
 
    <section id="inventory" className="mt-24 px-4 max-w-6xl mx-auto pb-20">
-  <h2 className="font-pixel text-2xl text-lavender text-center mb-12 drop-shadow-[3px_3px_0px_#fb6f92]">
-    EQUIPPED_SKILLS
-  </h2>
+   <div className="flex flex-col items-center justify-center gap-2 mb-16">
+    <h2 className="font-pixel text-4xl text-bubblegum drop-shadow-[3px_3px_0px_#ffc8dd]">
+      EQUIPMENTS
+    </h2>
+    
+  </div>
 
   <div className="flex flex-wrap justify-center gap-8 md:gap-12">
     <SkillCard icon={Globe} name="HTML" colorClass="bg-orange-100 text-orange-500" rarityColor="bg-orange-400" />
@@ -126,6 +136,12 @@ const App = () => {
     ))}
   </div>
 </section>
+
+
+<Contact />
+<footer className="text-center font-pixel text-[10px] text-lavender pb-10">
+        © 2026 NAZMIN // MADE WITH SPARKLES & REACT
+      </footer>
       
     </div>
   )
