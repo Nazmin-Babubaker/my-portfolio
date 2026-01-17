@@ -19,7 +19,6 @@ export default function SkillCard({ icon: Icon, name, colorClass, rarityColor })
           <p className="font-bold text-gray-700 text-sm leading-none pb-1">{name}</p>
         </div>
 
-        <div className="absolute top-1 right-2 opacity-0 group-hover:opacity-100 transition-opacity">✨</div>
       </div>
     </div>
   );

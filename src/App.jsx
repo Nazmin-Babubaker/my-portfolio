@@ -61,8 +61,7 @@ const App = () => {
     <SkillCard icon={Database} name="MongoDB" colorClass="bg-emerald-100 text-emerald-500" rarityColor="bg-emerald-400" />
 
     <SkillCard icon={Settings} name="Linux" colorClass="bg-slate-200 text-slate-700" rarityColor="bg-slate-500" />
-    <SkillCard icon={Terminal} name="Bash" colorClass="bg-zinc-800 text-green-400" rarityColor="bg-green-500" />
-  </div>
+    <SkillCard icon={Terminal} name="Bash" colorClass="bg-purple-100 text-purple-500" rarityColor="bg-purple-400" />  </div>
 </section>
       
     </div>
