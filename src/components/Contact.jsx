@@ -37,9 +37,9 @@ export default function Contact() {
             </div>
             
             <h3 className="text-5xl font-black text-[#bc6c25] leading-none tracking-tighter">
-              READY TO <br />
-              <span className="text-bubblegum">JOIN YOUR</span> <br />
-              PARTY?
+              NEED A <br />NEW <br />
+              <span className="text-bubblegum">PLAYER?</span> 
+
             </h3>
             
             <p className="text-[#997b66] font-mono text-sm max-w-sm">

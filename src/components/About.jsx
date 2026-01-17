@@ -10,7 +10,7 @@ export default function About() {
             <div className="w-4 h-4 rounded-full bg-white shadow-inner"></div>
             <div className="w-4 h-4 rounded-full bg-white/50"></div>
           </div>
-          <span className="font-pixel text-white text-sm tracking-[0.2em]">CHARACTER_STATUS</span>
+          <span className="font-pixel text-white text-sm tracking-[0.2em]">The_Character</span>
           <div className="w-10"></div>
         </div>
 
