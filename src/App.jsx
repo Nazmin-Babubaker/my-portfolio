@@ -6,6 +6,52 @@ import {
   Cpu, Layers, Box, Coffee, Layout, 
   Globe, Server, Settings, Search
 } from "lucide-react";import SkillCard from './components/SkillCard';
+import ProjectCard from './components/ProjectCard';
+
+
+
+const QUESTS = [
+  {
+    id: 1,
+    title: "Contextual Explainer",
+category: "Extension", 
+    description: "An AI-powered assistant that explains content in context by analyzing user input and generating meaningful, easy-to-understand responses.",
+    rewards: ["Manifest.json", "JavaScript", "HTML,CSS"],
+    image: "https://placehold.co/600x400/ffafcc/white?text=Contextual+Explainer"
+  },
+  {
+    id: 2,
+    title: "RIT Tracker",
+    category: "Web App", 
+    description: "A campus navigation platform with indoor and outdoor mapping that helps users locate departments, facilities, and services using intelligent pathfinding.",
+    rewards: ["JS", "Pannellum", "CSS"],
+    image: "https://placehold.co/600x400/cdb4db/white?text=RIT+Tracker"
+  },
+  {
+    id: 3,
+    title: "ServiceProvision",
+    category: "Web App", 
+    description: "A service-based web platform that connects users with nearby workers for tasks like cleaning, gardening, and plumbing through a role-based system.",
+    rewards: ["JS", "Express", "Postgres"],
+    image: "https://placehold.co/600x400/cdb4db/white?text=Service+Provision"
+  },
+  {
+    id: 4,
+    title: "Mentora",
+    category: "Extension", 
+    description: "An AI-driven mentoring assistant that provides guidance, learning support, and contextual help for users through interactive conversations.",
+    rewards: ["JS", "HTML", "Gemini API"],
+    image: "https://placehold.co/600x400/ffafcc/white?text=Mentora"
+  },
+  {
+    id: 5,
+    title: "Adaptive Cruise Control",
+    category: "Other", 
+    description: "A driver-assistance system that automatically maintains safe speed and distance from vehicles ahead using sensor data and control logic.",
+    rewards: ["ROS","Python"],
+    image: "https://placehold.co/600x400/cdb4db/white?text=ACC"
+  }
+];
 
 
 const App = () => {
@@ -62,6 +108,23 @@ const App = () => {
 
     <SkillCard icon={Settings} name="Linux" colorClass="bg-slate-200 text-slate-700" rarityColor="bg-slate-500" />
     <SkillCard icon={Terminal} name="Bash" colorClass="bg-purple-100 text-purple-500" rarityColor="bg-purple-400" />  </div>
+</section>
+
+
+
+<section id="quests" className="mt-32 px-4 max-w-7xl mx-auto pb-40"> 
+  <div className="flex flex-col items-center justify-center gap-2 mb-16">
+    <h2 className="font-pixel text-4xl text-bubblegum drop-shadow-[3px_3px_0px_#ffc8dd]">
+      QUEST_LOG
+    </h2>
+    <p className="font-mono text-xs text-lavender uppercase tracking-widest">Select a mission to view rewards</p>
+  </div>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {QUESTS.map((quest) => (
+      <ProjectCard key={quest.id} quest={quest} />
+    ))}
+  </div>
 </section>
       
     </div>
