@@ -7,17 +7,28 @@
   --color-lavender: #cdb4db;
   --color-matcha: #ddffbb;
   --color-cream: #fffaf0;
+
+  --color-dark-bg: #1a1a1a;
+  --color-dark-card: #2d2d2d;
   --font-pixel: "Silkscreen", sans-serif;
   --font-display: "DM Sans", sans-serif;
 }
+
+@variant dark (&:where(.dark, .dark *));
 
 body {
   background-color: var(--color-cream);
   font-family: var(--font-display);
   color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 120px; 
+}
+
+.dark body {
+  background-color: var(--color-dark-bg);
+  color: #f0f0f0;
 }

@@ -3,7 +3,7 @@ import myAvatar from "../assets/avatar.png";
 export default function About() {
   return (
     <section id="about" className="mt-32 px-4 max-w-4xl mx-auto flex justify-center">
-      <div className="w-full bg-[#fffcf2] border-[6px] border-bubblegum rounded-[40px] shadow-[15px_15px_0_0_#ffc8dd] overflow-hidden relative">
+      <div className="w-full bg-[#fffcf2] dark:bg-dark-card border-[6px] border-bubblegum rounded-[40px] shadow-[15px_15px_0_0_#ffc8dd] dark:shadow-[15px_15px_0_0_#4a3a40] overflow-hidden relative">
         
         <div className="bg-bubblegum p-4 flex justify-between items-center border-b-[6px] border-bubblegum">
           <div className="flex gap-2">
@@ -45,13 +45,13 @@ export default function About() {
 
           <div className="flex-1">
             <div className="mb-6">
-              <h2 className="text-4xl font-black text-gray-700 uppercase italic tracking-tighter">
+              <h2 className="text-4xl font-black text-gray-700 dark:text-gray-300 uppercase italic tracking-tighter">
                 Nazmin <span className="text-bubblegum">Babu Baker</span>
               </h2>
               <div className="h-1 w-24 bg-lavender mt-1"></div>
             </div>
 
-            <p className="text-gray-600 font-mono leading-relaxed mb-8 bg-white/50 p-4 rounded-2xl border-2 border-dashed border-pink-200">
+            <p className="text-gray-600 dark:text-gray-300 font-mono leading-relaxed mb-8 bg-white/50 dark:bg-black/20 p-4 rounded-2xl border-2 border-dashed border-pink-200 dark:border-pink-900">
               I’m a Computer Science student with a strong interest in backend development, system design, and network communication. I enjoy working on APIs, authentication, databases, backend services, and network protocols that make applications efficient, secure, and reliable. 
               Through projects like indoor navigation systems, AI tools, and service platforms, I enjoy exploring new technologies and learning by building. I focus on writing clean, scalable code and continuously strengthening my skills while creating practical, impactful solutions.
             </p>

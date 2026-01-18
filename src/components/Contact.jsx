@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <section id="contact" className="mt-32 px-4 max-w-4xl mx-auto pb-40">
       <div className="text-center mb-10">
-        <h2 className="font-pixel text-2xl text-bubblegum drop-shadow-[2px_2px_0px_#ffc8dd]">
+        <h2 className="font-pixel text-2xl text-bubblegum drop-shadow-[2px_2px_0px_#ffc8dd] dark:drop-shadow-[2px_2px_0px_#4a3a40]">
         CONTACT_POINT
         </h2>
         <p className="font-mono text-xs text-gray-400 mt-2 uppercase tracking-[0.3em]">
@@ -12,9 +12,9 @@ export default function Contact() {
         </p>
       </div>
 
-      <div className="relative bg-[#fefae0] border-8 border-[#d4a373] rounded-[50px] p-8 md:p-16 shadow-[20px_20px_0_0_#faedcd] overflow-hidden">
+      <div className="relative bg-[#fefae0] dark:bg-zinc-900 border-8 border-[#d4a373] dark:border-zinc-700 rounded-[50px] p-8 md:p-16 shadow-[20px_20px_0_0_#faedcd] dark:shadow-[20px_20px_0_0_#27272a] overflow-hidden">
         
-        <div className="absolute inset-0 opacity-10 pointer-events-none" 
+        <div className="absolute inset-0 opacity-10 pointer-events-none dark:opacity-5" 
              style={{ backgroundImage: `radial-gradient(#d4a373 1px, transparent 1px)`, backgroundSize: '30px 30px' }}>
         </div>
 
@@ -32,17 +32,17 @@ export default function Contact() {
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           
           <div className="text-left space-y-6">
-            <div className="inline-flex items-center gap-2 bg-[#d4a373] text-white px-4 py-1 rounded-full font-pixel text-[10px]">
+            <div className="inline-flex items-center gap-2 bg-[#d4a373] dark:bg-zinc-700 text-white px-4 py-1 rounded-full font-pixel text-[10px]">
               <MapPin size={12} /> CURRENT_LOCATION: REMOTE_WORLD
             </div>
             
-            <h3 className="text-5xl font-black text-[#bc6c25] leading-none tracking-tighter">
+            <h3 className="text-5xl font-black text-[#bc6c25] dark:text-lavender leading-none tracking-tighter">
               NEED A <br />NEW <br />
               <span className="text-bubblegum">PLAYER?</span> 
 
             </h3>
             
-            <p className="text-[#997b66] font-mono text-sm max-w-sm">
+            <p className="text-[#997b66] dark:text-gray-400 font-mono text-sm max-w-sm">
               The journey doesn't end here. Send an email to start our next adventure together.
             </p>
           </div>

@@ -6,7 +6,7 @@ export default function SkillCard({ icon: Icon, name, colorClass, rarityColor })
       
       <div className={`absolute inset-0 opacity-0 blur-2xl transition-all duration-500 group-hover:opacity-60 ${rarityColor}`}></div>
       
-      <div className="relative bg-white border-[3px] border-gray-500 rounded-2xl p-3 w-32 h-44 flex flex-col items-center justify-between shadow-[6px_6px_0_0_#cdb4db] transition-all group-hover:border-bubblegum group-hover:shadow-[6px_6px_0_0_#ffc8dd] group-hover:-translate-y-2 overflow-hidden">
+      <div className="relative bg-white dark:bg-dark-card border-[3px] border-gray-500 dark:border-gray-600 rounded-2xl p-3 w-32 h-44 flex flex-col items-center justify-between shadow-[6px_6px_0_0_#cdb4db] transition-all group-hover:border-bubblegum group-hover:shadow-[6px_6px_0_0_#ffc8dd] group-hover:-translate-y-2 overflow-hidden">
         
         <div className="w-full flex justify-between items-center mb-2 px-1">
           <div className={`h-1.5 w-8 rounded-full ${rarityColor} shadow-sm`}></div>
@@ -17,7 +17,7 @@ export default function SkillCard({ icon: Icon, name, colorClass, rarityColor })
         </div>
 
         <div className="w-full mt-2 text-center">
-          <p className="font-bold text-gray-700 text-[11px] uppercase tracking-tight group-hover:text-bubblegum transition-colors">
+          <p className="font-bold text-gray-700 dark:text-gray-200 text-[11px] uppercase tracking-tight group-hover:text-bubblegum transition-colors">
             {name}
           </p>
           
