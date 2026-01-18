@@ -32,3 +32,48 @@ html {
   background-color: var(--color-dark-bg);
   color: #f0f0f0;
 }
+
+@layer utilities {
+  .bg-grid {
+    background-color: var(--color-cream);
+    background-image: 
+      linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    position: relative;
+  }
+
+  .dark .bg-grid {
+    background-color: var(--color-dark-bg);
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  }
+
+  .grid-trail {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    background-color: var(--trail-color, var(--color-bubblegum));
+    pointer-events: none;
+    z-index: 1;
+    animation: fadeOutCell 0.8s forwards;
+    mix-blend-mode: multiply; 
+  }
+
+  .dark .grid-trail {
+    mix-blend-mode: screen;
+    box-shadow: 0 0 15px var(--trail-color);
+  }
+
+  @keyframes fadeOutCell {
+    0% { 
+      opacity: 0.6; 
+      transform: scale(1); 
+    }
+    100% { 
+      opacity: 0; 
+      
+    }
+  }
+}

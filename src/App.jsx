@@ -1,4 +1,6 @@
-import React from 'react'
+
+import React, { useEffect, useRef } from 'react';
+
 import Navbar from './components/Navbar'
 import About from './components/About'
 import { 
@@ -68,10 +70,57 @@ category: "Extension",
 
 
 const App = () => {
-  return (
-    <div className="min-h-screen">
-        <Navbar />
 
+const lastCell = useRef({ x: -1, y: -1 });
+  const colorIndex = useRef(0);
+
+ 
+  const colors = [
+    "#fb6f92", 
+    "#ffc8dd", 
+    "#cdb4db", 
+    "#ffafcc", 
+    "#b596c4", 
+  ];
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const gridSize = 30;
+      const cellX = Math.floor(e.clientX / gridSize) * gridSize;
+      const cellY = Math.floor(e.clientY / gridSize) * gridSize;
+
+      if (cellX !== lastCell.current.x || cellY !== lastCell.current.y) {
+        lastCell.current = { x: cellX, y: cellY };
+        
+        
+        const color = colors[colorIndex.current];
+        spawnTrail(cellX, cellY, color);
+        
+        colorIndex.current = (colorIndex.current + 1) % colors.length;
+      }
+    };
+
+    const spawnTrail = (x, y, color) => {
+      const trail = document.createElement("div");
+      trail.className = "grid-trail";
+      trail.style.left = `${x}px`;
+      trail.style.top = `${y}px`;
+      trail.style.setProperty('--trail-color', color);
+
+      document.body.appendChild(trail);
+
+      setTimeout(() => {
+        trail.remove();
+      }, 800);
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+  return (
+    <div className="min-h-screen bg-grid  transition-colors duration-500 overflow-x-hidden">
+        <Navbar />
+    <div className="relative z-10">
       <section className="pt-32 flex flex-col items-center justify-center text-center px-4">
         <div className="relative">
     
@@ -151,10 +200,10 @@ const App = () => {
 
 
 <Contact />
-<footer className="text-center font-pixel text-[10px] text-lavender pb-10">
+<footer className="text-center font-pixel text-[10px] text-lavender dark:text-gray-500 pb-10">
         © 2026 NAZMIN // MADE WITH SPARKLES & REACT
       </footer>
-      
+      </div>   
     </div>
   )
 }
