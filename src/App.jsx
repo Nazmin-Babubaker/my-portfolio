@@ -16,6 +16,7 @@ import serviceImg from "./assets/service.png";
 import mentoraImg from "./assets/mentora.png";
 import accImg from "./assets/acc.png";
 import Contact from './components/Contact';
+import { Github } from "lucide-react";
 
 
 
@@ -141,6 +142,15 @@ const lastCell = useRef({ x: -1, y: -1 });
            <span className="text-bubblegum font-bold">Backend developer</span> with a soft aesthetic and strong logic 
 
         </p>
+        <a 
+    href="https://github.com/Nazmin-Babubaker" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="mt-8 flex items-center gap-3 bg-bubblegum hover:bg-pop-pink text-white font-pixel text-sm px-8 py-4 rounded-2xl border-[3px] border-white shadow-[0_6px_0_0_#cdb4db] active:shadow-none active:translate-y-1 transition-all group"
+  >
+    <span>VIEW_MY_DUNGEON</span>
+    <Github size={20} className="group-hover: transition-transform" />
+  </a>
   
   
       </section>
